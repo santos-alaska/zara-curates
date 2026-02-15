@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* Section 2: Our Philosophy */}
       <section className="py-20 md:py-32 px-4">
-        <div className="container w-full mx-auto max-w-[65%]">
+        <div className="container w-full mx-auto md:max-w-[65%]">
           <div className="md:col-span-2 text-left mb-8">
             <h2 className="font-serif text-5xl md:text-7xl">
               <em className="italic font-normal">Our</em>
@@ -57,7 +57,7 @@ export default function Home() {
 
       {/* Section 3: The Zara Curate Approach */}
       <section className="bg-[#f9f7f4] py-20 md:py-32 px-4">
-        <div className="container mx-auto w-full max-w-[65%] text-center">
+        <div className="container mx-auto w-full md:max-w-[65%] text-center">
           <h2 className="font-serif text-4xl md:text-5xl mb-12">
             The Zara Curate Approach
           </h2>

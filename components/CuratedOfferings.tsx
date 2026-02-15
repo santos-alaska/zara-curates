@@ -6,13 +6,13 @@ const offerings = [
   {
     title: "BRAND IDENTITY",
     // Clean, minimal, dark aesthetic
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=800&auto=format&fit=crop",
+    image: "/brand-identity.jpg",
     link: "/brand-identity",
   },
   {
     title: "DIGITAL EXPERIENCE",
     // Blue/Tech phone aesthetic
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800&auto=format&fit=crop",
+    image: "/digital-experience.png",
     link: "/digital-experience",
   },
   {
@@ -31,11 +31,11 @@ const offerings = [
 
 const CuratedOfferings = () => {
   return (
-    <section className="bg-[#FAF9F6] py-24 px-6 md:px-12">
+    <section className="bg-[#FAF9F6] py-24 px-5 md:px-12">
       <div className="container mx-auto max-w-2xl">
 
         {/* Section Header */}
-        <div className="flex items-center gap-2 mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium">
+        <div className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium">
           <span>Curated Offerings</span>
           <ArrowRight size={14} />
         </div>
@@ -48,11 +48,11 @@ const CuratedOfferings = () => {
               {/* Image Container */}
               <div className="relative w-full aspect-[3/4] md:aspect-[4/5] mb-10 shadow-lg bg-neutral-200">
                 <Image
-                  // src={item.image}
-                  src='/prop.jpg'
+                  src={item.image}
+                  // src='/prop.jpg'
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-fit"
                   sizes="(max-width: 768px) 100vw, 600px"
                 />
               </div>
