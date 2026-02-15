@@ -1,33 +1,213 @@
+// import Image from "next/image";
+// import Link from "next/link";
+// import { ArrowRight } from "lucide-react";
+
+// type Offering = {
+//   title: string;
+//   link: string;
+//   type?: 'collage';
+// } & (
+//     | { image: string; type?: never }
+//     | { image1: string; image2: string; image3: string; image4: string; type: 'collage' }
+//   );
+
+// const offerings: Offering[] = [
+//   {
+//     title: "BRAND IDENTITY",
+//     image: "/brand-identity.jpg",
+//     link: "/brand-identity",
+//   },
+//   {
+//     title: "DIGITAL EXPERIENCE",
+//     image: "/digital-experience.png",
+//     link: "/digital-experience",
+//   },
+//   {
+//     title: "INTEGRATED CURATION",
+//     image1: "/elan.png",
+//     image2: "/phone.png",
+//     image3: "/sculpture.jpg",
+//     image4: "/cosmetics.png",
+//     link: "/integrated-curation",
+//     type: 'collage'
+//   },
+//   {
+//     title: "PRIVATE SESSIONS",
+//     image: "/chair.jpg",
+//     link: "/private-sessions",
+//   },
+// ];
+
+// const CuratedOfferings = () => {
+//   return (
+//     <section className="bg-[#FAF9F6] py-24 px-5 md:px-12">
+//       <div className="container mx-auto max-w-2xl">
+
+//         {/* Section Header */}
+//         <div className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium">
+//           <span>Curated Offerings</span>
+//           <ArrowRight size={14} />
+//         </div>
+
+//         {/* Column Layout (Vertical Stack) */}
+//         <div className="flex flex-col gap-32 ">
+//           {offerings.map((item, index) => (
+//             <div key={index} className="flex flex-col items-center text-center w-full">
+//               {item.type === 'collage' ? (
+//                 <div className="w-full mb-10 grid grid-cols-2 gap-2 bg-[#F4EFEAF0] p-5">
+//                   <div className="mt-[40px] md:mt-[100px] ">
+//                     <Image
+//                       src={item.image1}
+//                       alt={`${item.title} 1`}
+//                       width={200}
+//                       height={300}
+//                       className="object-cover h-[200px] md:h-[400px] w-[300px]"
+//                     />
+//                   </div>
+//                   <div className="relative  ">
+//                     <Image
+//                       src={item.image2}
+//                       alt={`${item.title} 2`}
+//                       width={200}
+//                       height={300}
+//                       className="object-cover h-full w-[150px] md:w-[300px]"
+//                     />
+//                   </div>
+
+//                   <div className="h-[210px] md:h-[432px] bg-white -mt-[50px] md:-mt-[100px] p-2 md:p-4">
+//                     <Image
+//                       src={item.image3}
+//                       alt={`${item.title} 3`}
+//                       width={200}
+//                       height={300}
+//                       className="object-cover h-[200px] md:h-[400px] w-[300px]"
+//                     />
+//                   </div>
+//                   <div className="md:w-[280px] mx-auto  bg-white p-2 md:p-4 mt-[15px] md:mt-[50px]">
+//                     <Image
+//                       src={item.image4}
+//                       alt={`${item.title} 4`}
+//                       width={200}
+//                       height={300}
+//                       className="object-cover h-[150px] md:h-[300px] w-full"
+//                     />
+//                   </div>
+//                 </div>
+//               ) : (
+//                 // Single Image for Regular Items
+//                 <div className="relative w-full aspect-[3/4] md:aspect-[4/5] mb-10 shadow-lg bg-neutral-200">
+//                   <Image
+//                     src={item.image}
+//                     alt={item.title}
+//                     fill
+//                     className="object-fit"
+//                     sizes="(max-width: 768px) 100vw, 600px"
+//                   />
+//                 </div>
+//               )}
+
+//               {/* Title */}
+//               <h3 className="text-xl md:text-2xl font-semibold tracking-wide mb-4 text-[#1E1C1B]">
+//                 {item.title}
+//               </h3>
+
+//               {/* Link */}
+//               <Link
+//                 href={item.link}
+//                 className="text-neutral-500 text-sm border-b border-neutral-300 pb-1 hover:text-black hover:border-black transition-all duration-300"
+//               >
+//                 Learn More
+//               </Link>
+//             </div>
+//           ))}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default CuratedOfferings;
+
+
+
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion, Variants } from "framer-motion";
 
-const offerings = [
+type Offering = {
+  title: string;
+  link: string;
+  type?: 'collage';
+} & (
+    | { image: string; type?: never }
+    | { image1: string; image2: string; image3: string; image4: string; type: 'collage' }
+  );
+
+const offerings: Offering[] = [
   {
     title: "BRAND IDENTITY",
-    // Clean, minimal, dark aesthetic
     image: "/brand-identity.jpg",
     link: "/brand-identity",
   },
   {
     title: "DIGITAL EXPERIENCE",
-    // Blue/Tech phone aesthetic
     image: "/digital-experience.png",
     link: "/digital-experience",
   },
   {
     title: "INTEGRATED CURATION",
-    // Warm lifestyle/collage aesthetic
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+    image1: "/elan.png",
+    image2: "/phone.png",
+    image3: "/sculpture.jpg",
+    image4: "/cosmetics.png",
     link: "/integrated-curation",
+    type: 'collage'
   },
   {
     title: "PRIVATE SESSIONS",
-    // Warm interior/chair aesthetic
-    image: "https://images.unsplash.com/photo-1595204642930-b3e5138c2c84?q=80&w=800&auto=format&fit=crop",
+    image: "/chair.jpg",
     link: "/private-sessions",
   },
 ];
+
+// Animation variants with proper typing
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, 0.05, 0.01, 0.9]
+    }
+  }
+};
+
+const imageVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.6, 0.05, 0.01, 0.9]
+    }
+  }
+};
 
 const CuratedOfferings = () => {
   return (
@@ -35,43 +215,166 @@ const CuratedOfferings = () => {
       <div className="container mx-auto max-w-2xl">
 
         {/* Section Header */}
-        <div className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium">
+        <motion.div
+          className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span>Curated Offerings</span>
           <ArrowRight size={14} />
-        </div>
+        </motion.div>
 
         {/* Column Layout (Vertical Stack) */}
-        <div className="flex flex-col gap-32">
+        <motion.div
+          className="flex flex-col gap-32"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {offerings.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center w-full">
+            <motion.div
+              key={index}
+              className="flex flex-col items-center text-center w-full"
+              variants={itemVariants}
+            >
+              {item.type === 'collage' ? (
+                <motion.div
+                  className="w-full mb-10 grid grid-cols-2 gap-2 bg-[#F4EFEAF0] p-5"
+                  variants={imageVariants}
+                >
+                  <motion.div
+                    className="mt-[40px] md:mt-[100px]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={item.image1}
+                        alt={`${item.title} 1`}
+                        width={200}
+                        height={300}
+                        className="object-cover h-[200px] md:h-[400px] w-[300px]"
+                      />
+                    </motion.div>
+                  </motion.div>
 
-              {/* Image Container */}
-              <div className="relative w-full aspect-[3/4] md:aspect-[4/5] mb-10 shadow-lg bg-neutral-200">
-                <Image
-                  src={item.image}
-                  // src='/prop.jpg'
-                  alt={item.title}
-                  fill
-                  className="object-fit"
-                  sizes="(max-width: 768px) 100vw, 600px"
-                />
-              </div>
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={item.image2}
+                        alt={`${item.title} 2`}
+                        width={200}
+                        height={300}
+                        className="object-cover h-full w-[150px] md:w-[300px]"
+                      />
+                    </motion.div>
+                  </motion.div>
+
+                  <motion.div
+                    className="h-[210px] md:h-[432px] bg-white -mt-[50px] md:-mt-[100px] p-2 md:p-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={item.image3}
+                        alt={`${item.title} 3`}
+                        width={200}
+                        height={300}
+                        className="object-cover h-[200px] md:h-[400px] w-[300px]"
+                      />
+                    </motion.div>
+                  </motion.div>
+
+                  <motion.div
+                    className="md:w-[280px] mx-auto bg-white p-2 md:p-4 mt-[15px] md:mt-[50px]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={item.image4}
+                        alt={`${item.title} 4`}
+                        width={200}
+                        height={300}
+                        className="object-cover h-[150px] md:h-[300px] w-full"
+                      />
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              ) : (
+                // Single Image for Regular Items
+                <motion.div
+                  className="relative w-full aspect-[3/4] md:aspect-[4/5] mb-10 shadow-lg bg-neutral-200 overflow-hidden"
+                  variants={imageVariants}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </motion.div>
+              )}
 
               {/* Title */}
-              <h3 className=" text-xl md:text-2xl font-semibold tracking-wide mb-4 text-[#1E1C1B]">
+              <motion.h3
+                className="text-xl md:text-2xl font-semibold tracking-wide mb-4 text-[#1E1C1B]"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 {item.title}
-              </h3>
+              </motion.h3>
 
               {/* Link */}
-              <Link
-                href={item.link}
-                className="text-neutral-500 text-sm border-b border-neutral-300 pb-1 hover:text-black hover:border-black transition-all duration-300"
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
-                Learn More
-              </Link>
-            </div>
+                <Link
+                  href={item.link}
+                  className="text-neutral-500 text-sm border-b border-neutral-300 pb-1 hover:text-black hover:border-black transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
