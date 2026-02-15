@@ -1,44 +1,79 @@
 import Link from "next/link";
-// import { Instagram, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
+
   return (
-    <footer className="bg-[#151413] text-neutral-400 py-20 text-center">
-      <div className="container mx-auto px-6 flex flex-col items-center gap-10">
-        
-        {/* Logo (Stylized 'a' or text) */}
-        <div className="text-white font-serif italic text-4xl mb-4">
-          ~ zc
+    <footer className="bg-[#1a1a1a] text-neutral-400 py-16 px-6">
+      <div className="container mx-auto max-w-4xl flex flex-col items-center">
+
+        {/* Logo/Signature */}
+        <div className="mb-12">
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-neutral-300"
+          >
+            <path
+              d="M15 35 Q20 30, 25 35 T35 35 Q40 30, 45 35"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              fill="none"
+              strokeLinecap="round"
+            />
+          </svg>
         </div>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-8">
-          {/* <Link href="#" className="hover:text-white transition-colors">
-            <Instagram size={20} strokeWidth={1.5} />
-          </Link> */}
-          {/* <Link href="#" className="hover:text-white transition-colors">
-            <Linkedin size={20} strokeWidth={1.5} />
-          </Link> */}
-          {/* <Link href="mailto:hello@zaracurates.com" className="hover:text-white transition-colors">
-            <Mail size={20} strokeWidth={1.5} />
-          </Link> */}
+        <div className="flex gap-6 mb-12">
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            className=" hover:border-neutral-400 transition-colors duration-300"
+          >
+            <Instagram size={28} className="text-neutral-400" />
+          </Link>
+          <Link
+            href="https://linkedin.com"
+            target="_blank"
+            className=" hover:border-neutral-400 transition-colors duration-300"
+          >
+            <Linkedin size={28} className="text-neutral-400" />
+          </Link>
+          <Link
+            href="mailto:contact@zaracurates.com"
+            className=" hover:border-neutral-400 transition-colors duration-300"
+          >
+            <Mail size={28} className="text-neutral-400" />
+          </Link>
         </div>
 
-        {/* Copyright & Info */}
-        <div className="text-[10px] tracking-[0.2em] uppercase space-y-4">
-          <p>© 2026 ZARA CURATES</p>
-          <div className="flex flex-col gap-2">
-            <Link href="/policies" className="hover:text-white transition-colors">
-              Policies
-            </Link>
-            <button 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="hover:text-white transition-colors mt-4"
-            >
-              Back to Top
-            </button>
-          </div>
+        {/* Copyright */}
+        <div className="text-neutral-500 text-sm mb-6 tracking-wider">
+          © 2026 ZARA CURATES
         </div>
+
+        {/* Policies Link */}
+        <Link
+          href="/policies"
+          className="text-neutral-500 text-sm mb-6 hover:text-neutral-300 transition-colors duration-300 tracking-wider"
+        >
+          POLICIES
+        </Link>
+
+        {/* Back to Top */}
+        <button
+          // onClick={scrollToTop}
+          className="text-neutral-500 text-sm hover:text-neutral-300 transition-colors duration-300 tracking-wider"
+        >
+          BACK TO TOP
+        </button>
 
       </div>
     </footer>

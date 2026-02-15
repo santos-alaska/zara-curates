@@ -31,13 +31,13 @@ export default function Home() {
               We believe the way a business grows is deeply connected to the way
               its founder thinks, decides, and leads.
             </p>
-            <Image
+            {/* <Image
               src="/pin.png"
               alt="Paperclip"
               width={180}
               height={180}
-              className="absolute -top-16 -right-2 transform -rotate-12 "
-            />
+              className="absolute -top-16 right-2 transform -rotate-12 "
+            /> */}
           </div>
 
           <div className="bg-[#2a2a2a] text-neutral-200 p-8 shadow-xl space-y-4">
@@ -139,7 +139,7 @@ export default function Home() {
       <Journal />
       <Newsletter />
       <InspirationGrid />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -338,10 +338,8 @@ const ImageCollage = () => {
   };
 
   return (
-    <div className="w-full relative py-20 min-h-[700px] md:min-h-[1500px] overflow-hidden">
+    <div className="w-full relative py-20 min-h-[800px] md:min-h-[1600px] overflow-hidden">
       <div className="relative w-full max-w-4xl mx-auto h-full z-10">
-
-        {/* 1. Top Left: Small Interior/Ceramics */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
