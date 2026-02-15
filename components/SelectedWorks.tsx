@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SelectedWorks = () => {
   return (
-    <section className="flex flex-col w-full mb-48">
+    <section className="flex flex-col w-full mb-14">
       
       {/* TOP SECTION: Text Content (Dark Background Image) */}
       <div className="w-full relative text-[#E5E5E5] py-20 px-6 md:px-20 flex flex-col justify-center items-center ">
