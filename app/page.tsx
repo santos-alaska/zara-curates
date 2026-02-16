@@ -8,6 +8,7 @@ import SelectedWorks from "@/components/SelectedWorks";
 import ImageCollage from "@/components/ImageCollage";
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import OurPhilosophy from "@/components/OurPhilosophy";
 
 export default function Home() {
   return (
@@ -16,44 +17,7 @@ export default function Home() {
       <Hero />
 
       {/* Section 2: Our Philosophy */}
-      <section className="py-20 md:py-32 px-4">
-        <div className="container w-full mx-auto md:max-w-[65%]">
-          <div className="md:col-span-2 text-left mb-8">
-            <h2 className="font-serif text-5xl md:text-7xl">
-              <em className="italic font-normal">Our</em>
-              <br />
-              Philosophy
-            </h2>
-          </div>
-
-          <div className="relative bg-white p-8 shadow-xl">
-            <p className="text-xl md:text-2xl leading-relaxed text-neutral-600">
-              We believe the way a business grows is deeply connected to the way
-              its founder thinks, decides, and leads.
-            </p>
-            {/* <Image
-              src="/pin.png"
-              alt="Paperclip"
-              width={180}
-              height={180}
-              className="absolute -top-16 right-2 transform -rotate-12 "
-            /> */}
-          </div>
-
-          <div className="bg-[#2a2a2a] text-neutral-200 p-8 shadow-xl space-y-4">
-            <p>
-              Zara Curates exists to align brand, product, strategy, finances,
-              and mindset—so growth is not chaotic, but intentional.
-            </p>
-            <p>We do not chase trends.</p>
-            <p>We do not overproduce noise.</p>
-            <p>
-              We curate clarity, structure, and direction—so brands can scale
-              with confidence and depth.
-            </p>
-          </div>
-        </div>
-      </section>
+      <OurPhilosophy />
 
       {/* Section 3: The Zara Curate Approach */}
       <section className="bg-[#f9f7f4] py-20 md:py-32 px-4">

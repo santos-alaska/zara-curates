@@ -5,7 +5,7 @@ import Image from 'next/image'; // Import Next.js Image component
 const Navbar = () => {
     return (
         <nav className="w-full bg-[#f0edeb] border-b border-[#D9C9B8]">
-            <div className="container mx-auto flex items-center p-6 relative" >
+            <div className="container mx-auto flex items-center p-4 md:p-6 relative" >
                 <Link
                     href="/"
                     className="absolute left-1/2 transform -translate-x-1/2"

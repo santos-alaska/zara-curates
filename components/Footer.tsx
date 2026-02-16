@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   // const scrollToTop = () => {
@@ -11,24 +12,19 @@ const Footer = () => {
       <div className="container mx-auto max-w-4xl flex flex-col items-center">
 
         {/* Logo/Signature */}
-        <div className="mb-12">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-neutral-300"
-          >
-            <path
-              d="M15 35 Q20 30, 25 35 T35 35 Q40 30, 45 35"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              fill="none"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
+        <Link
+          href="/"
+          className="mb-20"
+        >
+          <Image
+            src="/white-logo.png"
+            alt="Zara Curates Logo"
+            width={60} // Adjust width as needed
+            height={40} // Adjust height as needed
+            className="object-contain"
+            priority // Loads image immediately since it's above the fold
+          />
+        </Link>
 
         {/* Social Icons */}
         <div className="flex gap-6 mb-12">
