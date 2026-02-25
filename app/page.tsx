@@ -1,5 +1,4 @@
 import CuratedOfferings from "@/components/CuratedOfferings";
-import Footer from "@/components/Footer";
 import InspirationGrid from "@/components/InspirationGrid";
 import Invitation from "@/components/Invitation";
 import Journal from "@/components/Journal";
@@ -9,6 +8,7 @@ import ImageCollage from "@/components/ImageCollage";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import OurPhilosophy from "@/components/OurPhilosophy";
+import Approach from "@/components/Approach";
 
 export default function Home() {
   return (
@@ -20,14 +20,14 @@ export default function Home() {
       <OurPhilosophy />
 
       {/* Section 3: The Zara Curate Approach */}
-      <section className="bg-[#f9f7f4] py-20 md:py-32 px-4">
+      <Approach />
+      {/* <section className="bg-[#f9f7f4] py-25 md:py-32 px-4">
         <div className="container mx-auto w-full md:max-w-[65%] text-center">
-          <h2 className="font-serif text-4xl md:text-5xl mb-12">
+          <h2 className="font-serif text-3xl md:text-5xl mb-12 font-light">
             The Zara Curate Approach
           </h2>
 
           <div className="space-y-12 text-left">
-            {/* Item 1 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 bg-[#3f3f3f] text-white font-serif text-2xl w-14 h-14 flex items-center justify-center rounded-lg">
                 1
@@ -44,7 +44,6 @@ export default function Home() {
             </div>
             <hr className="border-neutral-300" />
 
-            {/* Item 2 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 bg-[#3f3f3f] text-white font-serif text-2xl w-14 h-14 flex items-center justify-center rounded-lg">
                 2
@@ -61,7 +60,6 @@ export default function Home() {
             </div>
             <hr className="border-neutral-300" />
 
-            {/* Item 3 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 bg-[#3f3f3f] text-white font-serif text-2xl w-14 h-14 flex items-center justify-center rounded-lg">
                 3
@@ -77,7 +75,6 @@ export default function Home() {
             </div>
             <hr className="border-neutral-300" />
 
-            {/* Item 4 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 bg-[#3f3f3f] text-white font-serif text-2xl w-14 h-14 flex items-center justify-center rounded-lg">
                 4
@@ -93,7 +90,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <SelectedWorks />
       <ImageCollage />

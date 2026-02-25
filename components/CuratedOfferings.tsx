@@ -78,7 +78,7 @@ const imageVariants: Variants = {
 
 const CuratedOfferings = () => {
   return (
-    <section className="bg-[#FAF9F6] py-24 px-5 md:px-12">
+    <section className="bg-[#FAF9F6] py-25 mt-20 px-5 md:px-12">
       <div className="container mx-auto max-w-2xl">
 
         {/* Section Header */}

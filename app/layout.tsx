@@ -55,8 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar /> {/* 2. Add the Navbar here */}
-        <main className=""> {/* 3. Add padding to the top of the main content */}
+        <Navbar />
+        <main className=""> 
           {children}
         </main>
         <Footer />

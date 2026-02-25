@@ -1,51 +1,10 @@
-
-// const OurPhilosophy = () => {
-//     return (
-//         <section className="py-20 md:py-32 px-4">
-//             <div className="container w-full mx-auto md:max-w-[65%]">
-//                 <div className="md:col-span-2 text-left mb-8">
-//                     <h2 className="font-serif text-5xl md:text-7xl">
-//                         <em className="italic font-normal">Our</em>
-//                         <br />
-//                         Philosophy
-//                     </h2>
-//                 </div>
-
-//                 <div className="">
-//                     <p className="">
-//                         We believe the way a business grows is deeply connected to the way
-//                         its founder thinks, decides, and leads.
-//                     </p>
-//                     <div className=" space-y-4">
-//                         <p>
-//                             Zara Curates exists to align brand, product, strategy, finances,
-//                             and mindset—so growth is not chaotic, but intentional.
-//                         </p>
-//                         <p>We do not chase trends.</p>
-//                         <p>We do not overproduce noise.</p>
-//                         <p>
-//                             We curate clarity, structure, and direction—so brands can scale
-//                             with confidence and depth.
-//                         </p>
-//                     </div>
-//                 </div>
-
-//             </div>
-
-//         </section>
-//     )
-// }
-
-// export default OurPhilosophy
-
-
 const OurPhilosophy = () => {
     return (
-        <section className="py-20 md:py-32 px-6 bg-[#fff]">
+        <section className="py-[200px] md:py-32 px-6 bg-[#fff]">
             <div className="container w-full mx-auto md:max-w-[65%]">
                 {/* Header */}
-                <div className="text-left mb-16 md:mb-24">
-                    <h2 className="font-serif text-5xl md:text-7xl text-[#1E1C1B] leading-tight">
+                <div className="text-left mb-10 md:mb-24">
+                    <h2 className="font-serif text-[26px] md:text-7xl text-[#1E1C1B] leading-tight">
                         <em className="italic font-light">Our</em>
                         <br />
                         <span className="font-serif">Philosophy</span>
