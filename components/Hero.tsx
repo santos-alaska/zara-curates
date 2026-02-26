@@ -125,15 +125,28 @@
 
 
 
-import Link from "next/link"; 
+import Link from "next/link";
+import { Bokor } from "next/font/google";
+import localFont from 'next/font/local'
+
+
+const bokorFont = Bokor({
+    subsets: ['latin'],
+    weight: "400",
+});
+
+const dobagi = localFont({
+    src: '../public/fonts/Dobagi.otf',
+})
+
 
 const Hero = () => {
+
     return (
-        <section className="relative h-[130vh] w-full bg-[#0a0a0a] -mt-22">
+        <section className="relative h-[140vh] w-full bg-[#0a0a0a] -mt-22">
             <div className="relative w-full h-full overflow-hidden">
 
                 {/* Background Video */}
-                {/* Note: Ensure the video is dark or abstract to match the vibe */}
                 <video
                     autoPlay
                     loop
@@ -157,12 +170,14 @@ const Hero = () => {
                     {/* 2. Main Headlines with specific spacing */}
                     <div className="flex flex-col items-center -mt-40">
                         {/* First Headline */}
-                        <h1 className="font-serif text-[32px] md:text-6xl text-[#E5E5E5] font-light tracking-wide mb-50 md:mb-40">
+                        <h1
+                            className={` ${dobagi.className} font-serif text-[32px] md:text-6xl text-[#E5E5E5] font-light tracking-wide mb-50 md:mb-40`}
+                        >
                             Build your brand.
                         </h1>
 
                         {/* Second Headline */}
-                        <h1 className="font-serif text-[32px] md:text-6xl text-[#E5E5E5] font-light tracking-wide mb-6">
+                        <h1 className={` ${dobagi.className}  font-serif text-[32px] md:text-6xl text-[#E5E5E5] font-light tracking-wide mb-6`}>
                             Refine your life.
                         </h1>
 
@@ -174,7 +189,7 @@ const Hero = () => {
                     </div>
 
                     {/* 3. Ghost Button aligned to bottom area */}
-                    <div className="absolute bottom-[5%] md:bottom-[5%]">
+                    <div className="absolute bottom-[10%] md:bottom-[5%]">
                         <button className="border border-[#333333] text-[#CCCCCC] bg-transparent py-2.5 md:py-4  md:px-10 w-[186px] md:w-full text-[10px] md:text-xs uppercase tracking-[0.15em] hover:border-[#666666] hover:text-white transition-all duration-500 ease-out">
                             Begin Your Curation
                         </button>
