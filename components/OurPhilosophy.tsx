@@ -1,14 +1,26 @@
+import localFont from 'next/font/local'
+
+
+const dobagi = localFont({
+    src: '../public/fonts/Dobagi.otf',
+})
+
+
 const OurPhilosophy = () => {
     return (
-        <section className="py-[200px] md:py-32 px-6 bg-[#fff]">
+        <section className="py-[100px] md:py-32 px-6 bg-[#fff]">
             <div className="container w-full mx-auto md:max-w-[65%]">
                 {/* Header */}
                 <div className="text-left mb-10 md:mb-24">
-                    <h2 className="font-serif text-[26px] md:text-7xl text-[#1E1C1B] leading-tight">
+                    <h1
+                        // className="font-serif text-[26px] md:text-7xl text-[#1E1C1B] leading-tight"
+                        className={` ${dobagi.className} font-serif text-[32px] md:text-6xl font-light leading-tight tracking-wide`}
+
+                    >
                         <em className="italic font-light">Our</em>
                         <br />
-                        <span className="font-serif">Philosophy</span>
-                    </h2>
+                        <span className="">Philosophy</span>
+                    </h1>
                 </div>
 
                 {/* Content */}

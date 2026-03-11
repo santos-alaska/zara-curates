@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import localFont from "next/font/local";
+
+const dobagi = localFont({
+    src: '../../public/fonts/Dobagi.otf',
+})
 
 export default function Contact() {
     // Animation variants with proper typing
@@ -13,6 +18,8 @@ export default function Contact() {
             transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] },
         },
     };
+
+
 
     return (
         <div className="bg-[#F8F5F1] min-h-screen flex flex-col">
@@ -31,7 +38,7 @@ export default function Contact() {
 
                 {/* Dark Overlay (optional, for better text readability) */}
                 {/* <div className="absolute inset-0 bg-black/50 z-0"></div> */}
-                <div className="absolute inset-0 bg-[#1D1A19D9] z-0"></div> 
+                <div className="absolute inset-0 bg-[#1D1A19D9] z-0"></div>
 
                 {/* Content */}
                 <motion.div
@@ -43,9 +50,13 @@ export default function Contact() {
                     <p className="text-xs md:text-sm uppercase tracking-widest text-neutral-400">
                         Apply to work with us
                     </p>
-                    <h1 className="font-serif text-5xl md:text-7xl leading-tight">
+                    <h1
+                        // className="font-serif text-5xl md:text-7xl leading-tight"
+                        className={` ${dobagi.className} font-serif text-[32px] md:text-6xl font-light tracking-wide mb-50 md:mb-40 text-center`}
+
+                    >
                         Let's explore your <br />
-                        <span className="italic">vision</span>
+                        vision
                     </h1>
                 </motion.div>
             </section>

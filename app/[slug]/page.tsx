@@ -86,12 +86,12 @@ export default function ServiceDetail() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
         <motion.div
           initial="hidden" animate="visible" variants={fadeInUp}
           className="max-w-3xl text-center space-y-8 z-10"
         >
-          <h1 className="font-serif text-5xl md:text-6xl">{content.title}</h1>
+          <h1 className=" text-[32px] md:text-6xl">{content.title}</h1>
           <p className="text-neutral-300 font-light leading-relaxed max-w-2xl mx-auto">
             {content.heroDesc}
           </p>
