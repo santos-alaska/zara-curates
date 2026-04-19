@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Invitation = () => {
   return (
-    <section className="flex flex-col w-full">
+    <section className="pb-[200px] md:pb-0 flex flex-col w-full">
       {/* Top Part: Dark Background Image */}
       <div className="w-full h-[40vh] relative flex items-center justify-center text-[#E5E5E5]">
 
@@ -30,7 +30,7 @@ const Invitation = () => {
       </div>
 
       {/* Bottom Part: White Content */}
-      <div className="w-full bg-white py-24 px-6 flex flex-col items-center text-center">
+      <div className="w-full bg-white pt-24 md:py-24 px-6 flex flex-col items-center text-center">
         <p className="max-w-xl text-neutral-600 text-[11px] md:text-lg leading-relaxed mb-25 font-light">
           Every collaboration begins with intention.<br />
           If you're building something considered and feel aligned with our approach, we invite you to begin a private conversation.

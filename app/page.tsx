@@ -16,10 +16,7 @@ export default function Home() {
 
       <Hero />
 
-      {/* Section 2: Our Philosophy */}
       <OurPhilosophy />
-
-      {/* Section 3: The Zara Curate Approach */}
       <Approach />
 
 

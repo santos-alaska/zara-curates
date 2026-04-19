@@ -1,6 +1,6 @@
 const Approach = () => {
     return (
-        <section className="bg-white py-25 md:py-32 px-6">
+        <section className="bg-white pb-[200px] md:py-32 px-6">
             <div className="container mx-auto w-full max-w-3xl">
 
                 {/* Optional Header - Kept for structure, but minimal */}

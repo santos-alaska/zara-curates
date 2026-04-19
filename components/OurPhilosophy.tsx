@@ -8,7 +8,7 @@ const dobagi = localFont({
 
 const OurPhilosophy = () => {
     return (
-        <section className="py-[100px] md:py-32 px-6 bg-[#fff]">
+        <section className="py-[200px] md:py-32 px-6 bg-[#fff]">
             <div className="container w-full mx-auto md:max-w-[65%]">
                 {/* Header */}
                 <div className="text-left mb-10 md:mb-24">
