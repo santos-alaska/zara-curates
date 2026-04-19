@@ -83,7 +83,7 @@ const CuratedOfferings = () => {
 
         {/* Section Header */}
         <motion.div
-          className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500 text-md tracking-[0.2em] uppercase font-medium"
+          className="flex items-center gap-2 mb-8 md:mb-20 text-neutral-500  text-[14px] md:text-md tracking-[0.2em] uppercase font-medium"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -216,7 +216,7 @@ const CuratedOfferings = () => {
 
               {/* Title */}
               <motion.h3
-                className="text-xl md:text-2xl font-semibold tracking-wide mb-4 text-[#1E1C1B]"
+                className="text-[12px] md:text-2xl font-semibold tracking-wide mb-4 text-[#1E1C1B]"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}

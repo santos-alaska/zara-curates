@@ -50,7 +50,7 @@ const Hero = () => {
                         </h1>
 
                         {/* Subtext */}
-                        <p className="text-[#aaa7a7] text-xs md:text-sm tracking-wide font-light max-w-md mx-auto leading-relaxed">
+                        <p className="text-[#aaa7a7] text-[11px] md:text-sm tracking-wide font-light max-w-md mx-auto leading-relaxed">
                             Philosophy before execution.<br />
                             Clarity before creation.
                         </p>

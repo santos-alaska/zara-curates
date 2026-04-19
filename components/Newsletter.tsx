@@ -17,11 +17,11 @@ const Newsletter = () => {
 
       {/* Content */}
       <div className="max-w-sm mx-auto relative z-10">
-        <h2 className="font-serif text-3xl md:text-4xl mb-12 text-white font-light">
+        <h2 className="font-serif text-[30px] md:text-4xl mb-12 text-white font-light">
           The Curated List
         </h2>
 
-        <div className="space-y-1 text-neutral-300 font-light mb-10 text-sm leading-relaxed">
+        <div className="space-y-1 text-neutral-300 font-light mb-10 text-[11px] md:text-sm leading-relaxed">
           <p>
             If something here resonated, you're welcome to stay close.
           </p>
@@ -30,7 +30,7 @@ const Newsletter = () => {
           </p>
         </div>
 
-        <p className="italic text-neutral-400 text-sm mb-12">
+        <p className="italic text-neutral-400 text-[11px] md:text-sm mb-12">
           Quietly. Intentionally.
         </p>
 

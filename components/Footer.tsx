@@ -19,10 +19,10 @@ const Footer = () => {
           <Image
             src="/white-logo.png"
             alt="Zara Curates Logo"
-            width={60} // Adjust width as needed
-            height={40} // Adjust height as needed
+            width={40} // Adjust width as needed
+            height={30} // Adjust height as needed
             className="object-contain"
-            priority // Loads image immediately since it's above the fold
+            priority
           />
         </Link>
 
@@ -33,32 +33,53 @@ const Footer = () => {
             target="_blank"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            <Instagram size={28} className="text-neutral-400" />
+            {/* <Instagram size={28} className="text-neutral-400" /> */}
+            <Image
+              src="/instagram.png"
+              alt="Instagram"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
           </Link>
           <Link
             href="https://linkedin.com"
             target="_blank"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            <Linkedin size={28} className="text-neutral-400" />
+            {/* <Linkedin size={28} className="text-neutral-400" /> */}
+            <Image
+              src="/linkedin.png"
+              alt="Linkedin"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
           </Link>
           <Link
             href="mailto:contact@zaracurates.com"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            <Mail size={28} className="text-neutral-400" />
+            {/* <Mail size={28} className="text-neutral-400" /> */}
+            <Image
+              src="/email.png"
+              alt="Mail"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
           </Link>
         </div>
 
         {/* Copyright */}
-        <div className="text-neutral-500 text-sm mb-6 tracking-wider">
+        <div className="text-neutral-500 text-[11px] md:text-sm mb-6 tracking-wider">
           © 2026 ZARA CURATES
         </div>
 
         {/* Policies Link */}
         <Link
           href="/policies"
-          className="text-neutral-500 text-sm mb-6 hover:text-neutral-300 transition-colors duration-300 tracking-wider"
+          className="text-neutral-500 text-[11px] md:text-sm mb-6 hover:text-neutral-300 transition-colors duration-300 tracking-wider"
         >
           POLICIES
         </Link>
@@ -66,7 +87,7 @@ const Footer = () => {
         {/* Back to Top */}
         <button
           // onClick={scrollToTop}
-          className="text-neutral-500 text-sm hover:text-neutral-300 transition-colors duration-300 tracking-wider"
+          className="text-neutral-500 text-[11px] md:text-sm hover:text-neutral-300 transition-colors duration-300 tracking-wider"
         >
           BACK TO TOP
         </button>

@@ -252,7 +252,15 @@ const Navbar = () => {
                         aria-label="Toggle menu"
                     >
                         {/* Dynamically swap icon color */}
-                        <VscMenu size={20} color={menuIconColor} />
+                        {/* <VscMenu size={20} color={menuIconColor} /> */}
+                        <Image
+                            src='/menu.png'
+                            alt="Zara Curates Logo"
+                            width={20}
+                            height={20}
+                            className="object-contain"
+                            priority
+                        />
                     </button>
                 </div>
             </nav>
