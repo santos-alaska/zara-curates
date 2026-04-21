@@ -1,7 +1,9 @@
-
-
-
+import localFont from 'next/font/local'
 import Image from "next/image";
+const dobagi = localFont({
+  src: '../public/fonts/Dobagi.otf',
+})
+
 
 const SelectedWorks = () => {
   return (
@@ -24,7 +26,7 @@ const SelectedWorks = () => {
 
         {/* Content */}
         <div className="max-w-3xl mx-auto relative z-10">
-          <p className="font-serif text-[26px] md:text-7xl leading-tight mb-8 text-light">
+          <p className={`${dobagi.className} font-serif text-[26px] md:text-7xl leading-tight mb-8 text-light`}>
             Executed Work & <br />
             <span className="">Thought pieces</span>
           </p>
