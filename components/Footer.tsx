@@ -33,12 +33,11 @@ const Footer = () => {
             target="_blank"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            {/* <Instagram size={28} className="text-neutral-400" /> */}
             <Image
               src="/instagram.png"
               alt="Instagram"
-              width={28}
-              height={28}
+              width={24}
+              height={24}
               className="object-contain"
             />
           </Link>
@@ -47,12 +46,11 @@ const Footer = () => {
             target="_blank"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            {/* <Linkedin size={28} className="text-neutral-400" /> */}
             <Image
               src="/linkedin.png"
               alt="Linkedin"
-              width={28}
-              height={28}
+              width={24}
+              height={24}
               className="object-contain"
             />
           </Link>
@@ -60,12 +58,11 @@ const Footer = () => {
             href="mailto:contact@zaracurates.com"
             className=" hover:border-neutral-400 transition-colors duration-300"
           >
-            {/* <Mail size={28} className="text-neutral-400" /> */}
             <Image
               src="/email.png"
               alt="Mail"
-              width={28}
-              height={28}
+              width={24}
+              height={24}
               className="object-contain"
             />
           </Link>

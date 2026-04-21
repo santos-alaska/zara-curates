@@ -1,3 +1,9 @@
+import localFont from 'next/font/local'
+
+const dobagi = localFont({
+    src: '../public/fonts/Dobagi.otf',
+})
+
 const Archive = () => {
   return (
     <section className="bg-[#FAF9F6] py-25 md:py-32 px-6">
@@ -10,7 +16,7 @@ const Archive = () => {
         </div>
         {/* Header */}
         <div className="text-left mb-16 md:mb-20">
-          <h2 className="font-serif text-[26px] md:text-7xl text-[#1E1C1B]/90 leading-tight italic font-light">
+          <h2 className={`${dobagi.className} font-serif text-[26px] md:text-7xl text-[#1E1C1B]/90 leading-tight italic font-light`}>
             <em>The</em> <span className="font-serif">Archive</span>
           </h2>
         </div>

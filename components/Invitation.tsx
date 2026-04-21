@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import localFont from 'next/font/local'
+
+const dobagi = localFont({
+    src: '../public/fonts/Dobagi.otf',
+})
+
 
 const Invitation = () => {
   return (
@@ -21,7 +27,7 @@ const Invitation = () => {
         </div>
 
         {/* Content */}
-        <h2 className="font-serif text-[26px] md:text-6xl text-center leading-tight relative z-10">
+        <h2 className={`${dobagi.className} font-serif text-[26px] md:text-6xl text-center leading-tight relative z-10`}>
           An Invitation to <br /> Begin
         </h2>
 

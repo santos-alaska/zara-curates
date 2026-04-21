@@ -1,4 +1,10 @@
 import Image from "next/image";
+import localFont from 'next/font/local'
+
+const dobagi = localFont({
+    src: '../public/fonts/Dobagi.otf',
+})
+
 
 const Newsletter = () => {
   return (
@@ -17,7 +23,7 @@ const Newsletter = () => {
 
       {/* Content */}
       <div className="max-w-sm mx-auto relative z-10">
-        <h2 className="font-serif text-[30px] md:text-4xl mb-12 text-white font-light">
+        <h2 className={`${dobagi.className} font-serif text-[30px] md:text-4xl mb-12 text-white font-light`}>
           The Curated List
         </h2>
 
