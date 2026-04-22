@@ -20,7 +20,7 @@ const InspirationGrid = () => {
               className="object-cover hover:scale-105 transition-transform duration-700"
             />
             {/* White opacity overlay */}
-            <div className="absolute inset-0 bg-white/70" />
+            <div className="absolute inset-0 bg-white/80" />
           </div>
         ))}
       </div>

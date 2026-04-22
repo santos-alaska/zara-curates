@@ -1,23 +1,29 @@
 import localFont from 'next/font/local'
 
 const dobagi = localFont({
-    src: '../public/fonts/Dobagi.otf',
+  src: '../public/fonts/Dobagi.otf',
 })
+
+const satoshi = localFont({
+  src: '../public/fonts/Satoshi-Regular.otf',
+})
+
 
 const Archive = () => {
   return (
-    <section className="bg-[#FAF9F6] py-25 md:py-32 px-6">
+    <section className=" py-25 md:py-32 px-6">
       <div className="container w-full mx-auto md:max-w-[65%]">
         {/* Top Label */}
         <div className="text-left mb-8">
-          <p className="text-[10px] md:text-sm text-neutral-400 uppercase tracking-[0.3em]">
+          <p className="text-[10px] md:text-sm text-neutral-300 uppercase tracking-[0.3em]">
             From The Archive
           </p>
         </div>
         {/* Header */}
         <div className="text-left mb-16 md:mb-20">
-          <h2 className={`${dobagi.className} font-serif text-[26px] md:text-7xl text-[#1E1C1B]/90 leading-tight italic font-light`}>
-            <em>The</em> <span className="font-serif">Archive</span>
+          <h2 className="text-[26px] md:text-7xl text-[#1E1C1B]/90 leading-tight font-light">
+            <em className={`${satoshi.className} italic`}>The</em>{" "}
+            <span className={`${dobagi.className} font-serif`}>Archive</span>
           </h2>
         </div>
         {/* Content */}
